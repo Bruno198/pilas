@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>pila$</title>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Pila$</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#modalcategoria">Categorias<span class="sr-only">(página atual)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#Modalnovo">Novo Lançamento <span class="sr-only">(página atual)</span></a>
+                  </li>
+              
+               
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+             
+              </form>
+            </div>
+          </nav>
+          <article>
+              <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="jumbotron">
+                            <h1>PILA$</h1>
+                            <p>Nesta Aplicação web Voçe Podera Gerenciar Todos seus Pila$ !</p>
+                            <hr>
+                            <p>Registre aqui Todos os pila$ que voçe ganha e todos pila$ que voçe gasta.
+                                 Separe em quantas categorias quiser</p>
+                        </div>
+                    </div>
+    
+                </div>
+                <table class="table table-hover">
+                    <thead>
+                      <tr>
+                       
+                        <th scope="col"></th>
+                        <th scope="col">Categoria</th>
+                        <th scope="col">Data e Hora</th>
+                        <th scope="col">Descriçao</th>
+                        <th scope="col">Pilas</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">+</th>
+                        <td>Salario</td>
+                        <td>06/09/2020 16:35:00</td>
+                        <td>Folha de setembro</td>
+                        <td>5.416,32</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlterar">Alterar</td>
+                        <td><button type="button" class="btn btn-danger "data-toggle="modal" data-target="#modalexcluir" onclick="sair()" >Excluir</td>
+                      </tr>
+                      
+                      <tr>
+                        <th scope="row">-</th>
+                        <td>Educação</td>
+                        <td>10/09/2020 08:45:00</td>
+                        <td>Mensalidade de setembro</td>
+                        <td>580,00</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlterar">Alterar</td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalexcluir" onclick="sair()" >Excluir</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">-</th>
+                        <td>Combustivel</td>
+                        <td>12/09/2020 18:00:00</td>
+                        <td>Gasolina Posto Alfa</td>
+                        <td>150,00</td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAlterar">Alterar</td>
+                        <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalexcluir" onclick="sair()" >Excluir</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+              
+          </article>
+      </header>
+    <div class="modal fade" id="modalAlterar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Alterar Lançamento</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a Descrição do Lançamento">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Quantos Pilas">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                  </form>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="modalcategoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Categorias</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vestuario">
+                    <button type="submit" class="btn btn-primary">Adicionar</button>
+                    <ul class="list-group">
+                        <li class="list-group-item">Alimentação</li>
+                        <li class="list-group-item">Combustivel</li>
+                        <li class="list-group-item">Educação</li>
+                        <li class="list-group-item">Entreterimento</li>
+                        <li class="list-group-item">Salario</li>
+                      </ul>
+           
+          </div>
+        </div>
+    
+   
+    </div>
+ </div>
+ </div>
+ <!-- Modal -->
+<div class="modal fade" id="Modalnovo" tabindex="-1" role="dialog" aria-labelledby="TituloModalLongoExemplo" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="TituloModalLongoExemplo">Novo Lançamento</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <form>
+               
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Categoria</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Alimentação</option>
+                    <option>Combostivel</option>
+                    <option>Educação</option>
+                    <option>Entreterimento</option>
+                    <option>Salario</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tipo</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                      <option>Ganho Pilas</option>
+                      <option>Gasto Pilas</option>
+                    </select>
+                  </div>
+                  <h5>Descrição</h5>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a Descrição do Lançamento">
+                  </div>
+                  <div class="form-group">
+                      <h5>Pilas</h5>
+                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder= "Pilas">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Salvar</button>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      function sair(){
+        alert('Deseja Excluir esse Lançameto agora') ;
+      }
+  </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+
+  
+</html>
